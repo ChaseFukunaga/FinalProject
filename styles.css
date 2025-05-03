@@ -1,0 +1,231 @@
+* {
+
+  }
+
+body{
+    background-color: #111823;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 65px;
+}
+
+.titlebar{
+    background-color: #ba3a46;
+    padding: 30px 0;
+}
+
+.navbar ul {
+    height: 70px;
+    background-color: #ff4654;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 25px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul li a:hover {
+    color: #ff4654;
+    background-color: white;
+    border-radius: 7px; 
+}
+
+ul li a:focus,
+ul li a:active {
+    color: white;
+    background: none;
+    outline: none;
+}
+
+.Agent img {
+    width: 300px;
+    height: auto; /* keeps aspect ratio */
+    padding: 50px;
+    margin-top: -80px;
+}
+
+.PlayerCard {
+    width: 1400px;           /* Fixed width of the card */
+    margin: 100px auto;
+    outline: 1px solid red;
+}
+
+.AgentName {
+    display: flex;
+    align-items: center; /* aligns vertically */
+    gap: 265px;         /* spacing between name and description */
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 120px; /* moves agent name to right */
+    margin-right: 60px; /* moves description to left*/
+}
+
+.Description p {
+    margin: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.Description{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.AgentSection {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* space between image and right-side div */
+}
+
+.Abilities {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-left: 0px;
+    margin-right: 60px;
+    width: 800px;
+}
+
+.Abilities li {
+    margin-bottom: 50px; /* Increased spacing between items */
+    font-size: 16px;
+}
+
+.SpacerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 55px;
+}
+
+.SpacerBox img {
+    width: 50px;
+    height: auto;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+  }
+  
+  .wheel-container {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    margin-right: 400px;
+  }
+  
+  .wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid #333;
+    position: relative;
+    transition: transform 5s cubic-bezier(0.33, 1, 0.68, 1);
+    overflow: hidden;
+  }
+  
+  .segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    overflow: hidden; /* Prevents text from overflowing */
+  }
+  
+  .segment > div {
+    transform-origin: bottom left;
+    transform: translate(-50%, -50%) rotate(22.5deg); /* Adjust for your slice angle */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    pointer-events: none;
+  }
+  
+  .pointer {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid black;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .result-container {
+    text-align: center;
+    max-width: 300px;
+    margin-left: 50px;
+  }
+  
+  #agent-image {
+    width: 100%;
+    max-height: 1000px;
+    object-fit: contain;
+    margin-top: 20px;
+  }
+
+  #agent-name {
+    font-family: 'Bebas Neue', sans-serif; /* Example font */
+    font-size: 50px; /* Adjust to your preference */
+    font-weight: bold;
+    color: #ffffff; /* Change to your preferred color */
+    margin-bottom: 10px; /* Space between name and image */
+  }
