@@ -53,7 +53,7 @@ const agents = [
   // Spin function
   function spin() {
     const extraSpins = 3600; // Number of extra spins
-    const randomAngle = Math.floor(Math.random() * 360); // Random angle within one rotation
+    const randomAngle = Math.floor(Math.random() * 360); // where the wheel will land
     deg += extraSpins + randomAngle;
   
     // Apply the rotation to the wheel
@@ -62,12 +62,13 @@ const agents = [
     setTimeout(() => {
       const normalizedDeg = deg % 360;
       const slice = 360 / agents.length;
-      const pickedIndex = Math.floor(((360 - normalizedDeg + slice / 2) % 360) / slice);
+      const pickedIndex = Math.floor(((360 - normalizedDeg + slice / 2) % 360) / slice);//calculates what agent was landed on under pointer
       const pickedAgent = agents[pickedIndex];
-  
+      
+      //shows results of wheel spin
       agentNameEl.textContent = `You got: ${pickedAgent.name}!`;
       agentImageEl.src = pickedAgent.img;
       agentImageEl.alt = pickedAgent.name;
       agentImageEl.style.display = "block";
-    }, 5000); // Wait for the wheel to stop spinning
+    }, 5000); // delays results until wheel stops spinning
   }
