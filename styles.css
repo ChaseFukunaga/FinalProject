@@ -23,14 +23,17 @@ h1 {
   padding: 30px 0;
 }
 
+.navbar{
+  background-color: #ff4654;
+  outline: 4px solid #ba3a46;
+}
+
 .navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 150px;
     height: 70px;
-    background-color: #ff4654;
-    outline: 4px solid #ba3a46;
 }
 
 ul li{
@@ -43,7 +46,6 @@ ul li a {
     text-decoration: none;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 50px;
-
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -69,7 +71,8 @@ ul li a:active {
 }
 
 .PlayerCard {
-    width: 1400px;           /* Fixed width of the card */
+    width: 90%;
+    max-width: 1400px;
     margin: 100px auto;
     outline: 10px solid #ba3a46;
     background-color: #ff4654;
@@ -111,7 +114,8 @@ ul li a:active {
     font-size: 18px;
     margin-left: 0px;
     margin-right: 60px;
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
 }
 
 .Abilities li {
@@ -123,7 +127,7 @@ ul li a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 45px;
+    gap: 45px; /*space between ability images vertically*/
     margin-left: 30px;
     margin-right: 20px;
     margin-top: 60px;
@@ -138,7 +142,7 @@ ul li a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 70px;
+  gap: 70px; /*space between ability images vertically*/
   margin-left: 30px;
   margin-right: 20px;
   margin-top: 60px;
@@ -153,7 +157,7 @@ ul li a:active {
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 70px;
+gap: 70px;/*space between ability images vertically*/
 margin-left: 30px;
 margin-right: 20px;
 margin-top: 60px;
@@ -171,16 +175,16 @@ height: auto;
     gap: 40px;
     flex-wrap: wrap;
     padding: 40px 0;
-  }
+}
   
-  .wheel-container {
+.wheel-container {
     position: relative;
     width: 700px;
     height: 700px;
     margin-right: 400px;
-  }
+}
   
-  .wheel {
+.wheel {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -188,9 +192,9 @@ height: auto;
     position: relative;
     transition: transform 5s cubic-bezier(0.33, 1, 0.68, 1);
     overflow: hidden;
-  }
+}
   
-  .segment {
+.segment {
     position: absolute;
     width: 50%;
     height: 50%;
@@ -199,9 +203,9 @@ height: auto;
     transform-origin: 0% 0%;
     clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
     overflow: hidden; /* Prevents text from overflowing */
-  }
+}
   
-  .segment > div {
+.segment > div {
     transform-origin: bottom left;
     transform: translate(-50%, -50%) rotate(22.5deg);
     position: absolute;
@@ -214,9 +218,9 @@ height: auto;
     font-weight: bold;
     text-shadow: 1px 1px 2px black;
     pointer-events: none;
-  }
+}
   
-  .pointer {
+.pointer {
     position: absolute;
     top: -20px;
     left: 50%;
@@ -226,18 +230,18 @@ height: auto;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 20px solid #ffffff;
-  }
+}
   
-  button {
+button {
     display: block;
     margin: 20px auto 0;
     padding: 10px 30px;
     font-size: 24px;
     border: 2px solid black;
     font-family: 'Bebas Neue', sans-serif;
-  }
+}
 
-  button:hover {
+button:hover {
     background-color: #ff4654; 
     color: white;
     cursor: pointer;
@@ -245,24 +249,70 @@ height: auto;
     transition: all 0.3s ease;
 }
    
-  .result-container {
+.result-container {
     text-align: center;
     max-width: 300px;
     margin-left: 50px;
-  }
+}
   
-  #agent-image {
+#agent-image {
     width: 100%;
     max-height: 1000px;
     object-fit: contain;
     margin-top: 20px;
-  }
+}
 
-  #agent-name {
+#agent-name {
     font-family: 'Bebas Neue', sans-serif; 
     font-size: 50px; 
     font-weight: bold;
     color: #ffffff; 
     margin-bottom: 10px;
-  }
+}
 
+.RoleQuiz {
+  margin: 0;
+  padding: 0px;
+}
+
+.Questions {
+  font-size: 36px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 12px solid #ba3a46;
+  text-align: center; 
+}
+
+.QuizTitle {
+  text-align: center;
+  color: #ff4654;
+  font-size: 64px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.question {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center; 
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ff4654;
+}

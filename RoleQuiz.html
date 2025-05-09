@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Valorant Agents</title>
+</head>
+<body class="RoleQuiz">
+
+    <div class="main">
+        <div class="titlebar">
+            <div class="title">
+                <h1>Valorant Agents</h1>
+            </div> 
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="RoleQuiz.html">Role Quiz</a></li>
+                <li><a href="Duelist.html">Duelist</a></li>
+                <li><a href="Controller.html">Controller</a></li>
+                <li><a href="Sentinel.html">Sentinel</a></li>
+                <li><a href="Initiator.html">Initiator</a></li>
+                <li><a href="index.html">Random Agent Picker</a></li>
+            </ul>
+        </div>  
+
+        <div class="quiz-container">
+            <h1 class="QuizTitle">Which Valorant Agent Role Are You?</h1>
+            <form id="quiz-form">
+            <div class="question">
+                <p class="Questions">1. What’s your playstyle?</p>
+                <label><input type="radio" name="q1" value="duelist"> Entry first, go aggressive.</label>
+                <label><input type="radio" name="q1" value="initiator"> Flash/clear for team entry.</label>
+                <label><input type="radio" name="q1" value="controller"> Smoke and control space.</label>
+                <label><input type="radio" name="q1" value="sentinel"> Lock down the site.</label>
+            </div>
+
+            <div class="question">
+                <p class="Questions">2. How do you help your team?</p>
+                <label><input type="radio" name="q2" value="duelist"> Get kills and push.</label>
+                <label><input type="radio" name="q2" value="initiator"> Set up team fights.</label>
+                <label><input type="radio" name="q2" value="controller"> Deny vision and block paths.</label>
+                <label><input type="radio" name="q2" value="sentinel"> Hold flanks and support.</label>
+            </div>
+        
+            <div class="question">
+                <p class="Questions">3. How do you approach fights?</p>
+                <label><input type="radio" name="q3" value="duelist"> Take duels confidently and go in first.</label>
+                <label><input type="radio" name="q3" value="initiator"> Use flashes or recon to open up safely</label>
+                <label><input type="radio" name="q3" value="controller"> Control sight lines and angles first</label>
+                <label><input type="radio" name="q3" value="sentinel"> Hold a position and wait for enemies</label>
+            </div>
+
+            <div class="question">
+                <p class="Questions">4. What do you do if your site is being pushed?</p>
+                <label><input type="radio" name="q4" value="duelist"> Rotate fast and start fragging.</label>
+                <label><input type="radio" name="q4" value="initiator"> Delay them with utility and retake together.</label>
+                <label><input type="radio" name="q4" value="controller"> Block choke points and buy time.</label>
+                <label><input type="radio" name="q4" value="sentinel"> Lock down entry points with traps or utility.</label>
+            </div>
+
+            <div class="question">
+                <p class="Questions">5. If your team is losing badly, you:</p>
+                <label><input type="radio" name="q5" value="duelist"> Try to carry and shift the momentum.</label>
+                <label><input type="radio" name="q5" value="initiator"> Coordinate a high-impact team play.</label>
+                <label><input type="radio" name="q5" value="controller"> Re-evaluate your utility usage.</label>
+                <label><input type="radio" name="q5" value="sentinel"> Lock down the site harder to stabilize.</label>
+            </div>
+
+            <div class="question">
+                <p class="Questions">6. You enjoy characters who are:</p>
+                <label><input type="radio" name="q6" value="duelist"> Flashy, bold, and aggressive.</label>
+                <label><input type="radio" name="q6" value="initiator"> Tactical and team-oriented.</label>
+                <label><input type="radio" name="q6" value="controller"> Cool-headed and map-controlling.</label>
+                <label><input type="radio" name="q6" value="sentinel"> Resourceful and defensive.</label>
+            </div>
+
+            <div class="question">
+                <p class="Questions">7. What's your strength in Valorant?</p>
+                <label><input type="radio" name="q7" value="duelist"> Explore and entry to learn angles.</label>
+                <label><input type="radio" name="q7" value="initiator"> Figure out where recon/utility works best.</label>
+                <label><input type="radio" name="q7" value="controller"> Learn the best smokes and blocks.</label>
+                <label><input type="radio" name="q7" value="sentinel"> Check where flanks usually happen.</label>
+            </div>
+
+            <button class="Submit" type="button" onclick="calculateResult()">Submit</button>
+            </form>
+        
+            <div id="result"></div>
+      </div>
+      <script src="Quiz.js"></script>
+    </div>
+    </body>
+</html>
