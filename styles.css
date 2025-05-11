@@ -113,9 +113,9 @@ ul li a:active {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     margin-left: 0px;
-    margin-right: 60px;
+    margin-right: 60px; /*space on the right of ability description*/
     width: 90%;
-    max-width: 800px;
+    max-width: 800px; /* how wide the ability div is */
 }
 
 .Abilities li {

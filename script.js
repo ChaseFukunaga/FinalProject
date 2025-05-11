@@ -36,16 +36,11 @@ const agents = [
   
   // Build the wheel segments
   agents.forEach((agent, i) => {
-    const slice = 360 / agents.length;
+    const slice = 360 / agents.length; //each segemnt's angle 
     const segment = document.createElement("div");
     segment.className = "segment";
     segment.style.backgroundColor = agent.color;
-    segment.style.transform = `rotate(${i * slice}deg) skewY(${90 - slice}deg)`;
-  
-    // Add the agent's name inside the segment
-    const textDiv = document.createElement("div");
-    textDiv.textContent = agent.name;
-    segment.appendChild(textDiv);
+    segment.style.transform = `rotate(${i * slice}deg) skewY(${90 - slice}deg)`; //make each segement into a pie shape slice
   
     wheel.appendChild(segment);
   });
@@ -53,8 +48,8 @@ const agents = [
   // Spin function
   function spin() {
     const extraSpins = 3600; // Number of extra spins
-    const randomAngle = Math.floor(Math.random() * 360); // where the wheel will land
-    deg += extraSpins + randomAngle;
+    const randomAngle = Math.floor(Math.random() * 360); // random angle where the wheel lands
+    deg += extraSpins + randomAngle; //total rotation
   
     // Apply the rotation to the wheel
     wheel.style.transform = `rotate(${deg}deg)`;
