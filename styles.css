@@ -153,21 +153,6 @@ ul li a:active {
   height: auto;
 }
 
-.GekkoAbilityBox {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 70px;/*space between ability images vertically*/
-margin-left: 30px;
-margin-right: 20px;
-margin-top: 60px;
-}
-
-.GekkoAbilityBox img {
-width: 50px;
-height: auto;
-}
-
 .main-container {
     display: flex;
     justify-content: center;
